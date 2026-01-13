@@ -6,6 +6,16 @@ Welcome, Detective! A crime has occurred in our small town, and we need your com
 
 A crime has been committed in our quiet town. The police have narrowed down the list of suspects and potential weapons, but they need your help to identify the perpetrator and the murder weapon. The crime must have taken place in an empty room, as no one in town witnessed the act.
 
+## Game Setup
+
+Before you begin your investigation, you need to generate a fresh mystery to solve. Open your terminal in the game folder and run:
+
+```bash
+python3 clue.py
+```
+
+This will create a `game` directory containing all the clues, suspects, and weapons for this specific case.
+
 ## How to Investigate
 
 ### Using the Detective's Notebook

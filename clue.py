@@ -36,7 +36,7 @@ structure = {
     },
     "cafe": {}
   },
-  "houses": {
+  "Residential Area": {
     "mansion": {
       "library": {
         "study": {}
@@ -105,6 +105,19 @@ class MysteryGame:
       return paths
     return get_paths(structure)
 
+  def _get_leaf_rooms(self):
+    """Gets only room paths that have no subdirectories."""
+    def get_leafs(structure, current_path=""):
+        leafs = []
+        for name, substructure in structure.items():
+            new_path = f"{current_path}/{name}" if current_path else name
+            if not substructure:
+                leafs.append(new_path)
+            else:
+                leafs.extend(get_leafs(substructure, new_path))
+        return leafs
+    return get_leafs(structure)
+
   def generate_mystery(self, num_suspects=6, num_weapons=6):
     """
     Generates all elements of our mystery game.
@@ -131,7 +144,10 @@ class MysteryGame:
     # Choose our answers
     self.guilty_suspect = random.choice(self.suspects)
     self.murder_weapon = random.choice(self.weapons)
-    self.murder_location = random.choice(self.all_rooms)
+    
+    # NEW: Ensure murder location is a specific room (leaf node)
+    leaf_rooms = self._get_leaf_rooms()
+    self.murder_location = random.choice(leaf_rooms)
 
     # Remove answers from distribution pools
     available_suspects = [s for s in self.suspects if s != self.guilty_suspect]
