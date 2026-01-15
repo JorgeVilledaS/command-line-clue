@@ -1,7 +1,7 @@
 # Detective's Notebook
 
 ## Suspects
-- [ ] The Doctor
+- [X] The Doctor
 - [ ] The Artist
 - [ ] The Postman
 
