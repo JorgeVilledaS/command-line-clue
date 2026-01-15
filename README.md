@@ -114,3 +114,8 @@ cat clue.txt   # Read the next clue
 - Keep track of which suspects and weapons you've crossed off
 
 Happy investigating, Detective! The town is counting on you to solve this mystery!
+
+
+### SOLUCIÓN !!!!!!!!!
+El detective encontró exitosamente que el asesino era el Postman, el arma un Paintbrush y la ubicación, Kitchen!
+
