@@ -6,7 +6,7 @@
 - [ ] The Postman
 
 ## Weapons
-- [ ] Wooden Box
+- [X] Wooden Box
 - [ ] Paint Brush
 - [X] Magnifying Glass
 
